@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.roll-in-left {
+	animation: roll-in-left 0.8s ease-out both;
+}
+
+ @keyframes roll-in-left {
+  0% {
+    transform: translateX(-800px) rotate(-540deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.tracking-in-contract-bck-bottom {
+	animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+
+ @keyframes tracking-in-contract-bck-bottom {
+  0% {
+    letter-spacing: 1em;
+    transform: translateZ(400px) translateY(300px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+.jello-horizontal:hover {
+  background-color: #dbf3ec;
+	animation: jello-horizontal 0.5s both;
+}
+
+ @keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.slide-top {
+	animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+.color-change-5x {
+	animation: color-change-5x 8s linear infinite alternate both;
+}
+
+@keyframes color-change-5x {
+  0% {
+    background: #e3f2f4; /* Lighter, soft blue */
+  }
+  25% {
+    background: #f3ebfa; /* Soft lavender */
+  }
+  50% {
+    background: #dbf3ec; /* Light pink */
+  }
+  75% {
+    background: #e6f7ef; /* Pale mint green */
+  }
+  100% {
+    background: #f4ffec; /* Soft pastel green */
+  }
+}
+
+.bg-void {
+  background: radial-gradient(circle, 
+    rgba(29, 29, 39, 0.9) 0%,   /* dark center */
+    rgba(17, 17, 27, 0.8) 40%,  /* smooth transition */
+    rgba(13, 13, 23, 0.95) 100% /* deep outer void */
+  );
+}
+
+.slide-in-bck-center {
+	animation: slide-in-bck-center 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-bck-center {
+  0% {
+    transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+.shadow-drop-2-center:hover {
+	animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes shadow-drop-2-center {
+  0% {
+    transform: translateZ(0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: translateZ(50px);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+  }
+}
+
+.kenburns-top {
+  overflow: hidden;
+}
+
+.kenburns-top:hover {
+	animation: kenburns-top 5s ease-out both;
+}
+
+@keyframes kenburns-top {
+  0% {
+    transform: scale(1) translateY(0);
+    transform-origin: center top; /* Zooming from the top center */
+  }
+  100% {
+    transform: scale(1.25) translateY(-15px); /* Adjust the scale and translate */
+    transform-origin: center top; /* Ensure the zoom stays within the container */
+  }
+}
